@@ -1,0 +1,1 @@
+for i=1,10 do print("1") end
