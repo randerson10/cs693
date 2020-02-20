@@ -3,13 +3,13 @@
 #include "texture_utils.hpp"
 #include "Game.hpp"
 
-Tank::Tank(const float xpos, const float ypos, const float xvel, const float yvel) //: xpos(xpos), ypos(ypos), xvel(xvel), yvel(yvel)
+Tank::Tank(const float xpos, const float ypos, const float xvel, const float yvel)
 {
    GameObject::xpos = xpos;
    GameObject::ypos = ypos;
    GameObject::xvel = xvel;
    GameObject::yvel = yvel;
-   
+
    texture = texture::load_texture("../assets/images/tank-big-down.png");
    if(texture == NULL) {
       throw std::runtime_error("Not able to load tank texture");

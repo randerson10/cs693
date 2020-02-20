@@ -3,7 +3,7 @@
 #include "texture_utils.hpp"
 #include "Game.hpp"
 
-Chopper::Chopper(const float xpos, const float ypos, const float xvel, const float yvel) //: xpos(xpos), ypos(ypos), xvel(xvel), yvel(yvel)
+Chopper::Chopper(const float xpos, const float ypos, const float xvel, const float yvel)
 {
    GameObject::xpos = xpos;
    GameObject::ypos = ypos;
