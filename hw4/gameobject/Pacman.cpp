@@ -3,9 +3,14 @@
 #include "texture_utils.hpp"
 #include "Game.hpp"
 
-Pacman::Pacman(const float xpos, const float ypos, const float xvel, const float yvel) : xpos(xpos), ypos(ypos), xvel(xvel), yvel(yvel)
+Pacman::Pacman(const float xpos, const float ypos, const float xvel, const float yvel) //: xpos(xpos), ypos(ypos), xvel(xvel), yvel(yvel)
 {
-    texture = texture::load_texture("../assets/images/pacman/pacman_32x32.png");
+   GameObject::xpos = xpos;
+   GameObject::ypos = ypos;
+   GameObject::xvel = xvel;
+   GameObject::yvel = yvel;
+
+    GameObject::texture = texture::load_texture("../assets/images/pacman/pacman_32x32.png");
     if(texture == NULL) {
         throw std::runtime_error("Not able to load pacman texture");
     }

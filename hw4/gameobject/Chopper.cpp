@@ -3,12 +3,17 @@
 #include "texture_utils.hpp"
 #include "Game.hpp"
 
-Chopper::Chopper(const float xpos, const float ypos, const float xvel, const float yvel) : xpos(xpos), ypos(ypos), xvel(xvel), yvel(yvel)
+Chopper::Chopper(const float xpos, const float ypos, const float xvel, const float yvel) //: xpos(xpos), ypos(ypos), xvel(xvel), yvel(yvel)
 {
-    texture = texture::load_texture("../assets/images/chopper-single.png");
-    if(texture == NULL) {
-        throw std::runtime_error("Not able to load chopper texture");
-    }
+   GameObject::xpos = xpos;
+   GameObject::ypos = ypos;
+   GameObject::xvel = xvel;
+   GameObject::yvel = yvel;
+
+   texture = texture::load_texture("../assets/images/chopper-single.png");
+   if(texture == NULL) {
+      throw std::runtime_error("Not able to load chopper texture");
+   }
 }
 
 Chopper::~Chopper()
