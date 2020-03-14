@@ -10,8 +10,8 @@ Entity::Entity(EntityManager& manager)
 : manager(manager)
 {}
 
-Entity::Entity(EntityManager& manager, std::string name)
-: manager(manager), name(name)
+Entity::Entity(std::string name, EntityManager& manager)
+: name(name), manager(manager)
 {}
 
 void Entity::update(const float dt)

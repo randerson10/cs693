@@ -13,7 +13,7 @@ class Entity {
 public:
    std::string name;
    Entity(EntityManager& manager);
-   Entity(EntityManager& manager, std::string name);
+   Entity(std::string name, EntityManager& manager);
    void update(const float dt);
    void render();
    void destroy();
